@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.31410.223
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login.API", "Login\Login.API.csproj", "{592639D1-C20B-4964-B415-4CF997AE7A55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login.Domain", "Login.Domain\Login.Domain.csproj", "{63BD3A1C-9D24-4935-90E5-04BF28D236E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login.Domain", "Login.Domain\Login.Domain.csproj", "{63BD3A1C-9D24-4935-90E5-04BF28D236E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login.Application", "Login.Application\Login.Application.csproj", "{5062FBB0-B801-4C8A-B1F1-38A9664AFE57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login.Application", "Login.Application\Login.Application.csproj", "{5062FBB0-B801-4C8A-B1F1-38A9664AFE57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login.Infrastructure", "Login.Infrastructure\Login.Infrastructure.csproj", "{755EF637-1A95-4E00-A3AD-D77CAF164C81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login.Infrastructure", "Login.Infrastructure\Login.Infrastructure.csproj", "{755EF637-1A95-4E00-A3AD-D77CAF164C81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9FE77E2A-67D5-4150-B90D-BD5D6B71BEFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login.Test", "Login.Test\Login.Test.csproj", "{BAA2A696-AFDE-44FF-B9A2-26BC87DA2DD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{755EF637-1A95-4E00-A3AD-D77CAF164C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{755EF637-1A95-4E00-A3AD-D77CAF164C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{755EF637-1A95-4E00-A3AD-D77CAF164C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA2A696-AFDE-44FF-B9A2-26BC87DA2DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA2A696-AFDE-44FF-B9A2-26BC87DA2DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA2A696-AFDE-44FF-B9A2-26BC87DA2DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA2A696-AFDE-44FF-B9A2-26BC87DA2DD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAA2A696-AFDE-44FF-B9A2-26BC87DA2DD3} = {9FE77E2A-67D5-4150-B90D-BD5D6B71BEFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {23D4F57A-B315-4153-873C-3636F6844F78}
