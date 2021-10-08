@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  login.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      LOGIN_CONN: Host=login-db;Port=5432;Database=usersregister;User Id=postgres;Password=postgres;      
+      ALLOWED_HOSTS: http://localhost:54214
+    ports:
+      - "54214:80"
+    depends_on:
+      - login-db
+    networks:
+      - login-api-network
+
+  login-db:
+    image: postgres:latest
+    restart: always
+    environment:  
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=UsersRegister
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
+    networks:
+      - login-api-network
+      
+  login-db-pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "teste@teste.com"
+      PGADMIN_DEFAULT_PASSWORD: "postgres"
+    ports:
+      - "16543:80"
+    depends_on:
+      - login-db
+    networks:
+      - login-api-network
+volumes:
+  pgservers:
+  pgdata:
+
+networks:
+    login-api-network:
