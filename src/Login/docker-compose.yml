@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  login.api:
+    image: ${DOCKER_REGISTRY-}loginapi
+    build:
+      context: .
+      dockerfile: Login/Dockerfile
+networks:
+    login-api-network:

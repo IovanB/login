@@ -1,7 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>6a73be64-ecbe-47ad-b9e8-8359c59964a7</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +14,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.10" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Login.Application\Login.Application.csproj" />
+    <ProjectReference Include="..\Login.Domain\Login.Domain.csproj" />
+    <ProjectReference Include="..\Login.Infrastructure\Login.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
